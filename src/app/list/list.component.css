@@ -1,0 +1,29 @@
+td {
+    border: 1px solid black;
+    text-align: center;
+    padding: 5px;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+.button {
+    font-size: small;
+    cursor: pointer;
+}
+
+.button:hover {
+    color: gray;
+}
+
+.selected {
+    background-color: lightgray;
+}
+
+:host {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+}

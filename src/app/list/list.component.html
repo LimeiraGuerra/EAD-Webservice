@@ -1,0 +1,22 @@
+<div>
+    <table>
+        <thead>
+            <tr>
+                <td>Preço</td>
+                <td>Descrição</td>
+                <td>Título</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let p of listProducts" [class.selected]="p == selectedProduct">
+                <td>{{p.price}}</td>
+                <td>{{p.description}}</td>
+                <td>{{p.title}}</td>
+                <td class="button" (click)="selectProduct(p)">Editar</td>
+                <td class="button" (click)="delete(p._id, p.title)">Remover</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<app-edit [product]="selectedProduct"></app-edit>
